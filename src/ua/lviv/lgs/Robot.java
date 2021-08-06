@@ -1,23 +1,28 @@
 package ua.lviv.lgs;
 
+
 import java.util.StringJoiner;
 
 public class Robot {
 
-    private String work;
+     String descriptionWork;
 
-    Robot(String work){
-        this.work = work;
+    public Robot() {
+        this.descriptionWork = "Я Robot – я просто працюю";
     }
 
-    static void work(String work) {
-        System.out.println(work);
+    public void work(){
+        System.out.println(this.descriptionWork);
+    }
+
+    public String getDescriptionWork() {
+        return descriptionWork;
     }
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", Robot.class.getSimpleName() + "[", "]")
-                .add("work='" + work + "'")
+        return new StringJoiner("", "" + "", "")
+                .add( descriptionWork )
                 .toString();
     }
 }

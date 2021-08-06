@@ -2,23 +2,28 @@ package ua.lviv.lgs;
 
 public class Main {
     public static void main(String[] args) {
-        Robot.work("Я Robot – я просто працюю");
-        RobotCoocker.work("Я RobotCoocker – я просто готую");
-        RobotDancer.work("Я RobotDancer – я просто танцюю");
-        CoffeRobot.work("Я CoffeRobot – я варю каву");
+
+    Robot           a = new Robot();
+    CoffeRobot      b = new CoffeRobot();
+    RobotDancer     c = new RobotDancer();
+    RobotCoocker    d = new RobotCoocker();
+    a.work();
+    b.work();
+    c.work();
+    d.work();
         System.out.println(" ");
+        System.out.println("_______________________________________________________________________________");
+        System.out.println(" ");
+    Robot[] work = new Robot[4];
+        work[0]=a;
+        work[1]=b;
+        work[2]=c;
+        work[3]=d;
+    for (int i = 0 ; i < work.length ; i++){
+        System.out.println(work[i]);
+    }
 
 
-        Robot[] a;
-        a= new Robot[4];
-            a[0]= new Robot("Я Robot – я просто працюю");
-            a[1]= new Robot("Я RobotCoocker – я просто готую");
-            a[2]= new Robot("Я RobotDancer – я просто танцюю");
-            a[3]= new Robot("Я CoffeRobot – я варю каву");
-
-            for (int i =0;i<a.length;i++){
-                System.out.println(a[i]);
-            }
 
     }
 }
